@@ -10,7 +10,7 @@
    - just my personal taste
 
    Last one in extends properties has highest priority
-   I'm using TypeScript so @typescript-eslint is required
+   // I'm using TypeScript so @typescript-eslint is required
 */
 
 module.exports = {

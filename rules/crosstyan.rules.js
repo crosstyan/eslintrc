@@ -1,5 +1,5 @@
+// Crosstyan custom eslint rule based on Airbnb
 module.exports = {
-  "plugins": ["@typescript-eslint"],
   rules: {
     // ? Just some style stuff
     // ! I hate semi
@@ -10,7 +10,9 @@ module.exports = {
     "object-curly-spacing": "warn",
     "no-param-reassign": "warn",
     "no-underscore-dangle": "warn",
-    "no-empty-function": "warn",
+    // You can add comment to the function body
+    // to avoid this
+    "no-empty-function": "error", 
     "no-trailing-spaces": "warn",
     "arrow-parens": "warn",
     "eol-last": "warn",
@@ -20,6 +22,7 @@ module.exports = {
     quotes: "off",
     "linebreak-style": ["off", "unix"],
     "lines-between-class-members": "off",
+
     // ? Security and Error proof
 
     // Don't use bitwise unless you know what are you doing
@@ -29,10 +32,9 @@ module.exports = {
     "max-classes-per-file": "off",
     "no-plusplus": "off",
     'no-console': 'warn',
-
-    // ? TypeScript
-    "@typescript-eslint/no-empty-function": "warn",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
+    // On the other hand, if the code is targeting only ES5-compliant
+    // environments passing the radix 10 may be redundant.
+    // In such a case you might want to disallow using such a radix.
+    "radix": "off"
   },
 }
